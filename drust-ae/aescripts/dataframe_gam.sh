@@ -11,7 +11,7 @@ done
 
 
 
-echo "Run GEMM with GAM on 1 server"
+echo "Run dataframe with GAM on 1 server"
 cp ~/DRust_home/configs/gam/local.h ~/DRust_home/GAM-baseline/LibGAM/include/settings.h
 cp ~/DRust_home/configs/gam/df/1.rs ~/DRust_home/GAM-baseline/Applications/src/conf.rs
 bash ~/DRust_home/GAM-baseline/build_gam.sh

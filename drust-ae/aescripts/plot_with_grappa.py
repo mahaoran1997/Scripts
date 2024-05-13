@@ -70,6 +70,7 @@ if app == 'sn':
 else:
     singletime = read_from_file('single', ReadFromBaseline)
 gamtime = read_from_files('gam', ReadFromBaseline)
+grappatime = read_from_files('grappa', ReadFromBaseline)
 drusttime = read_from_files('drust')
 fx = read_from_csv('/mnt/ssd/guest/DRust_home/aescripts/nodenum.csv')
 
@@ -80,6 +81,7 @@ for i in range(8):
     gamtime[i] = base / gamtime[i]
     drusttime[i] = base / drusttime[i]
     singletime[i] = base / singletime[i]
+    grappatime[i] = base / grappatime[i]
 
 
 # print(gamtime)
@@ -91,6 +93,7 @@ marker_size = 16
 
 plt.plot(fx, drusttime, marker='o', markersize=marker_size,  label=bold('Drust'), color=colors[2][0])
 plt.plot(fx, gamtime, marker='*', markersize=marker_size, label=bold('GAM'), color=colors[3][1])
+plt.plot(fx, grappatime, marker="x", markersize=marker_size, label=bold('Grappa'), color=colors[3][0])
 # plt.plot(fx, grappatime, marker="x", markersize=marker_size, label=bold('Grappa'), color=colors[3][0])
 if app == 'sn':
     plt.plot(fx, singletime, marker="v", markersize=marker_size, linestyle="dotted", label=bold('Original'), color=colors[2][1])
